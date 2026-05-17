@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:#050c1a;color:#f0ebe0;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+.animate-fade-up{animation:fadeUp .8s ease forwards}
+.animate-fade-up-2{animation:fadeUp .8s .2s ease both}
+.animate-fade-up-3{animation:fadeUp .8s .4s ease both}
+.animate-fade-up-4{animation:fadeUp .8s .6s ease both}
+.animate-float{animation:float 4s ease-in-out infinite}
+.animate-spin-slow{animation:spinSlow 22s linear infinite}
+.animate-marquee{animation:marquee 26s linear infinite}
+.animate-fade-in{animation:fadeIn 1.2s ease forwards}
+
+.btn-gold{background:linear-gradient(135deg,#c9a84c,#e8c96a);color:#050c1a;font-weight:600;letter-spacing:.04em;transition:all .3s;box-shadow:0 4px 24px rgba(201,168,76,.3)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(201,168,76,.5)}
+.btn-ghost{border:1px solid rgba(201,168,76,.5);color:#c9a84c;transition:all .3s}
+.btn-ghost:hover{background:rgba(201,168,76,.1);border-color:#c9a84c}
+
+.nav-link{position:relative;color:rgba(240,235,224,.65);transition:color .3s;font-size:14px;font-weight:500;letter-spacing:.03em;text-decoration:none}
+.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:#c9a84c;transition:width .3s}
+.nav-link:hover{color:#c9a84c}
+.nav-link:hover::after{width:100%}
+
+.prog-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:2rem;transition:all .35s cubic-bezier(.25,.46,.45,.94)}
+.prog-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.3);transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+
+.testimonial-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:2rem;transition:border-color .3s,transform .3s}
+.testimonial-card:hover{border-color:rgba(201,168,76,.3);transform:translateY(-4px)}
+
+.grid-bg{background-image:linear-gradient(rgba(201,168,76,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.05) 1px,transparent 1px);background-size:60px 60px}
+.section-label{font-size:11px;letter-spacing:.25em;color:#c9a84c;text-transform:uppercase;font-weight:700;margin-bottom:1.5rem;display:block}
+
+/* Academic Dividers */
+.academic-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent);margin:4rem 0}
+
+/* Prospectus Borders */
+.prospectus-card{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:24px;padding:2.5rem;transition:all .4s ease}
+.prospectus-card:hover{border-color:rgba(201,168,76,.25);background:rgba(201,168,76,.03);transform:translateY(-4px)}
+
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#050c1a}
+::-webkit-scrollbar-thumb{background:#c9a84c;border-radius:2px}
